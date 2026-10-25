@@ -94,7 +94,15 @@
     "Hold gently for 4 counts, without strain.": "ఒత్తిడి లేకుండా 4 లెక్కల పాటు మెల్లగా నిలిపి ఉంచండి.",
     "Breathe out slowly through the mouth for 4 counts.": "నోటితో మెల్లగా 4 లెక్కల పాటు శ్వాస బయటకు వదలండి.",
     "← Back to Home": "← హోమ్‌కు తిరిగి వెళ్ళండి",
-    "Follow the flow, one breath at a time.": "ఒక్కో శ్వాసతో ప్రవాహాన్ని అనుసరించండి."
+    "Follow the flow, one breath at a time.": "ఒక్కో శ్వాసతో ప్రవాహాన్ని అనుసరించండి.",
+    "Explore Surya Namaskar →": "సూర్య నమస్కార్‌ను అన్వేషించండి →",
+    "Gallery": "గ్యాలరీ",
+    "Online Classes": "ఆన్‌లైన్ తరగతులు",
+    "Offline Classes": "ఆఫ్‌లైన్ తరగతులు",
+    "From our classes": "మా తరగతుల నుండి",
+    "A glimpse of our online and offline sessions.": "మా ఆన్‌లైన్ మరియు ఆఫ్‌లైన్ సెషన్ల యొక్క చిన్న పరిచయం.",
+    "View full gallery →": "పూర్తి గ్యాలరీ చూడండి →",
+    "Moments from our online and offline sessions.": "మా ఆన్‌లైన్ మరియు ఆఫ్‌లైన్ సెషన్ల నుండి క్షణాలు."
   };
   const TE_HTML = {
     ".hero h1": "<em>ప్రారంభించడానికి</em> ఎప్పుడూ ఆలస్యం కాదు.",
