@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pavantejan.github.io/Shri-Yoga/sitemap.xml
