@@ -5,138 +5,44 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shri Yoga, Guntur — Yoga for a Better You</title>
 <meta name="description" content="Shri Yoga, Guntur. Online and offline yoga classes, morning and evening batches. Festive season discount till 8th November. It's never too late to begin.">
+<meta property="og:title" content="Shri Yoga, Guntur — Yoga for a Better You">
+<meta property="og:description" content="Online ₹1000 & offline ₹1500 yoga classes in Guntur. Morning 6:00–6:45 AM, evening 7:00–7:45 PM. Festive discount till 8th November.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pavantejan.github.io/Shri-Yoga/">
+<meta property="og:image" content="https://pavantejan.github.io/Shri-Yoga/poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230c3b2e'/><path d='M32 12c4.5 8 4.5 15 0 22-4.5-7-4.5-14 0-22Z' fill='%23c9a24b'/><path d='M14 26c6 2 11 7 14 13-7-1-12-6-14-13Zm36 0c-6 2-11 7-14 13 7-1 12-6 14-13Z' fill='%23c9a24b'/><path d='M12 40c6 6 13 9 20 9s14-3 20-9c-5 8-12 12-20 12S17 48 12 40Z' fill='%23c9a24b'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --green:#0c3b2e; --green-dark:#082a21; --green-soft:#e7efe6;
-    --cream:#faf6ee; --cream-2:#f3ecdd; --gold:#c9a24b; --gold-soft:#f3e9c8;
-    --ink:#1d2b25; --muted:#5b6b63; --white:#ffffff;
-    --shadow:0 18px 40px rgba(12,59,46,.14); --radius:22px;
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{font-family:'Outfit',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;overflow-x:hidden}
-  h1,h2,h3{font-family:'Fraunces',Georgia,serif;color:var(--green);line-height:1.15}
-  a{color:inherit}
-  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-  /* Nav */
-  nav{position:sticky;top:0;z-index:50;background:rgba(250,246,238,.9);backdrop-filter:blur(10px);transition:box-shadow .3s}
-  nav.scrolled{box-shadow:0 8px 30px rgba(12,59,46,.12)}
-  .nav-in{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-  .logo{display:flex;align-items:center;gap:10px;font-family:'Fraunces',Georgia,serif;font-size:24px;font-weight:700;color:var(--green);text-decoration:none}
-  .logo svg{width:34px;height:34px}
-  .nav-links{display:flex;gap:26px;list-style:none}
-  .nav-links a{text-decoration:none;font-weight:500;color:var(--ink)}
-  .nav-links a:hover{color:var(--green)}
-  .btn{display:inline-block;background:var(--green);color:#fff;text-decoration:none;font-weight:600;padding:13px 26px;border-radius:999px;transition:transform .25s,box-shadow .25s,background .25s}
-  .btn:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(12,59,46,.28);background:var(--green-dark)}
-  .btn.gold{background:var(--gold);color:var(--green-dark)}
-  .btn.gold:hover{background:#b8913a}
-  .btn.light{background:#fff;color:var(--green);border:1.5px solid var(--green)}
-  .btn.small{padding:10px 20px;font-size:15px}
-  /* Hero */
-  .hero{padding:56px 0 64px;position:relative}
-  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
-  .eyebrow{display:inline-block;background:var(--green-soft);color:var(--green);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:13px;padding:8px 16px;border-radius:999px}
-  .hero h1{font-size:clamp(42px,6vw,68px);margin:20px 0 16px}
-  .hero h1 em{color:var(--gold);font-style:normal}
-  .hero p{font-size:18px;color:var(--muted);max-width:520px}
-  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
-  .hero-note{margin-top:18px;font-size:14px;color:var(--muted)}
-  .hero-note b{color:#b3541e}
-  .hero-img{position:relative}
-  .hero-img img{width:100%;border-radius:28px;box-shadow:var(--shadow);display:block;animation:floaty 6s ease-in-out infinite}
-  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-  .float-badge{position:absolute;left:-14px;bottom:26px;background:var(--green);color:#fff;padding:12px 18px;border-radius:16px;box-shadow:var(--shadow);font-weight:600;font-size:15px}
-  .float-badge span{color:var(--gold)}
-  /* Reveal on scroll */
-  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
-  .reveal.visible{opacity:1;transform:none}
-  /* Benefits */
-  .section{padding:64px 0}
-  .section h2{font-size:clamp(30px,4vw,42px);text-align:center}
-  .section .sub{text-align:center;color:var(--muted);max-width:560px;margin:12px auto 0;font-size:17px}
-  .benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
-  .benefit{background:#fff;border-radius:var(--radius);padding:28px 20px;text-align:center;box-shadow:0 8px 24px rgba(12,59,46,.07);transition:transform .3s,box-shadow .3s}
-  .benefit:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
-  .benefit .ic{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:28px}
-  .benefit h3{font-size:20px}
-  /* Offer banner */
-  .offer{background:linear-gradient(135deg,var(--green),var(--green-dark));border-radius:28px;color:#fff;padding:40px;text-align:center;position:relative;overflow:hidden}
-  .offer h2{color:#fff;font-size:clamp(28px,4vw,38px)}
-  .offer p{color:#d8e4d6;margin-top:8px}
-  .countdown{display:flex;gap:14px;justify-content:center;margin-top:26px;flex-wrap:wrap}
-  .cd{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:14px 18px;min-width:86px}
-  .cd b{display:block;font-size:30px;font-family:'Fraunces',Georgia,serif;color:var(--gold)}
-  .cd span{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#cfe0cc}
-  .offer-prices{margin-top:24px;font-size:18px}
-  .offer-prices s{opacity:.6}
-  .offer-prices b{color:var(--gold)}
-  /* Pricing */
-  .pricing{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}
-  .price-card{background:#fff;border-radius:26px;padding:36px 32px;box-shadow:0 8px 24px rgba(12,59,46,.07);position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
-  .price-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
-  .price-card.featured{border:2px solid var(--gold)}
-  .tag{position:absolute;top:20px;right:-34px;transform:rotate(38deg);background:var(--gold);color:var(--green-dark);font-weight:700;font-size:13px;padding:6px 40px}
-  .price-card h3{font-size:24px}
-  .price-card .mode{color:var(--muted);margin:6px 0 18px}
-  .price-row{margin:14px 0 4px}
-  .price-row s{color:#9aa79f;font-size:22px}
-  .price-row .now{font-family:'Fraunces',Georgia,serif;font-size:52px;color:var(--green);font-weight:700;line-height:1}
-  .price-card ul{list-style:none;margin:20px 0 26px;color:var(--muted)}
-  .price-card li{padding:7px 0 7px 28px;position:relative}
-  .price-card li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:700}
-  /* Timings */
-  .timings{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}
-  .time-card{background:#fff;border-radius:26px;padding:32px;display:flex;gap:20px;align-items:center;box-shadow:0 8px 24px rgba(12,59,46,.07);transition:transform .3s}
-  .time-card:hover{transform:translateY(-4px)}
-  .time-ic{width:72px;height:72px;flex:none;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px}
-  .time-card h3{font-size:22px}
-  .time-card .t{font-size:22px;font-weight:700;color:var(--ink)}
-  .slots{text-align:center;margin-top:26px;font-weight:600;color:#b3541e}
-  .pulse{display:inline-block;width:10px;height:10px;background:#d97706;border-radius:50%;margin-right:8px;animation:pulse 1.6s infinite}
-  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(217,119,6,.5)}70%{box-shadow:0 0 0 10px rgba(217,119,6,0)}100%{box-shadow:0 0 0 0 rgba(217,119,6,0)}}
-  /* Contact */
-  .contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:22px;margin-top:40px;align-items:stretch}
-  .contact-card{background:#fff;border-radius:26px;padding:34px;box-shadow:0 8px 24px rgba(12,59,46,.07)}
-  .contact-card h3{font-size:22px;margin-bottom:14px}
-  .contact-card p{color:var(--muted);margin-bottom:18px}
-  .contact-actions{display:flex;gap:12px;flex-wrap:wrap}
-  .map{border:0;width:100%;height:100%;min-height:320px;border-radius:26px;box-shadow:0 8px 24px rgba(12,59,46,.07)}
-  footer{background:var(--green-dark);color:#cfe0cc;text-align:center;padding:30px 20px;margin-top:20px}
-  footer b{color:#fff;font-family:'Fraunces',Georgia,serif;font-size:20px}
-  @media(max-width:820px){
-    .hero-grid,.pricing,.timings,.contact-grid{grid-template-columns:1fr}
-    .benefits{grid-template-columns:1fr 1fr}
-    .nav-links{display:none}
-    .hero{padding-top:36px}
-    .float-badge{left:10px}
-  }
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <nav id="nav">
   <div class="wrap nav-in">
-    <a class="logo" href="#top">
+    <a class="logo" href="index.html">
       <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 6c3 6 3 11 0 16-3-5-3-10 0-16Z" fill="#0c3b2e"/><path d="M24 22c-7-1-13-5-16-12 7-1 13 3 16 12Zm0 0c7-1 13-5 16-12-7-1-13 3-16 12Z" fill="#2e7d5b"/><path d="M8 30c6 6 10 8 16 8s10-2 16-8c-5 9-10 12-16 12S13 39 8 30Z" fill="#c9a24b"/></svg>
       Shri Yoga
     </a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Menu">☰</button>
     <ul class="nav-links">
-      <li><a href="#benefits">Benefits</a></li>
-      <li><a href="#classes">Classes</a></li>
-      <li><a href="#timings">Timings</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="surya.html">Surya Namaskar</a></li>
+      <li><a href="breathe.html">Breathing</a></li>
+      <li><a href="index.html#classes">Classes</a></li>
+      <li><a href="index.html#timings">Timings</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
     </ul>
     <a class="btn small" href="https://forms.gle/aTSgxCUhNtvd9ntq8" target="_blank" rel="noopener">Register</a>
+    <button class="btn small lang-btn" id="langToggle" type="button">తెలుగు</button>
   </div>
 </nav>
 
 <header class="hero" id="top">
   <div class="wrap hero-grid">
-    <div>
+    <div class="hero-copy">
+      <p class="hero-greet" id="dayGreet"></p>
       <span class="eyebrow">Yoga for a Better You</span>
       <h1>It's never too late <em>to begin.</em></h1>
       <p>Shri Yoga, Guntur — live online and in-studio classes for every level, in calm morning and evening batches. Begin your practice today.</p>
@@ -148,20 +54,34 @@
     </div>
     <div class="hero-img">
       <img src="poster.jpg" alt="Shri Yoga festive offer poster — online and offline yoga classes in Guntur">
-      <div class="float-badge">Festive offer · <span>till 8th Nov</span></div>
+      <div class="float-badge"><span>Festive offer</span> · <span>till 8th Nov</span></div>
     </div>
   </div>
 </header>
+
+<div class="ribbon" aria-hidden="true"><div class="ribbon-track"><span>Reduce Stress ✦ Improve Health ✦ Increase Flexibility ✦ Enhance Focus ✦ It's never too late to begin ✦&nbsp;</span><span>Reduce Stress ✦ Improve Health ✦ Increase Flexibility ✦ Enhance Focus ✦ It's never too late to begin ✦&nbsp;</span></div></div>
 
 <section class="section" id="benefits">
   <div class="wrap">
     <h2 class="reveal">Why practice with us</h2>
     <p class="sub reveal">Yoga that meets you where you are — gentle, guided, and regular.</p>
     <div class="benefits">
-      <div class="benefit reveal"><div class="ic" style="background:#dce8dc">🧘</div><h3>Reduce Stress</h3></div>
-      <div class="benefit reveal"><div class="ic" style="background:#fde2e2">❤️</div><h3>Improve Health</h3></div>
-      <div class="benefit reveal"><div class="ic" style="background:#fbeed3">🤸</div><h3>Increase Flexibility</h3></div>
-      <div class="benefit reveal"><div class="ic" style="background:#e7e0f5">🧠</div><h3>Enhance Focus</h3></div>
+      <div class="benefit reveal"><div class="ic" style="background:#dce8dc"><svg viewBox="0 0 48 48" width="34" height="34" fill="none" stroke="#b8913a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 8c3.5 6 3.5 11 0 16-3.5-5-3.5-10 0-16Z"/><path d="M11 19c4.5 1.5 8.5 5 11 10-6-1-10-5-11-10Z"/><path d="M37 19c-4.5 1.5-8.5 5-11 10 6-1 10-5 11-10Z"/><path d="M9 33c5 5 9.5 7 15 7s10-2 15-7"/></svg></div><h3>Reduce Stress</h3></div>
+      <div class="benefit reveal"><div class="ic" style="background:#fde2e2"><svg viewBox="0 0 48 48" width="34" height="34" fill="none" stroke="#b8913a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 40 10 27C5 22 5 15 11 12c4-2 9 0 13 5 4-5 9-7 13-5 6 3 6 10 1 15Z"/></svg></div><h3>Improve Health</h3></div>
+      <div class="benefit reveal"><div class="ic" style="background:#fbeed3"><svg viewBox="0 0 48 48" width="34" height="34" fill="none" stroke="#b8913a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="9" r="4"/><path d="M24 14v14M24 18c-5-1-8-3-10-7M24 18c5-1 8-3 10-7M24 28l-6 12M24 28l6 12"/></svg></div><h3>Increase Flexibility</h3></div>
+      <div class="benefit reveal"><div class="ic" style="background:#e7e0f5"><svg viewBox="0 0 48 48" width="34" height="34" fill="none" stroke="#b8913a" stroke-width="2.2" stroke-linecap="round"><circle cx="24" cy="24" r="4" fill="#b8913a" stroke="none"/><circle cx="24" cy="24" r="10"/><circle cx="24" cy="24" r="17"/></svg></div><h3>Enhance Focus</h3></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="surya" style="padding-top:10px">
+  <div class="wrap">
+    <div class="surya reveal">
+      <h2>Surya Namaskar</h2>
+      <p class="sub">The Sun Salutation — a flowing sequence that wakes up the whole body, breath by breath.</p>
+      <div class="surya-frame"><div class="surya-scroll"><img src="poses/surya-namaskar.webp" alt="Surya Namaskar sequence in gold line art — prayer, raised arms, forward fold, lunge, plank, eight-limbed, cobra, downward dog and back to prayer"></div></div>
+      <p class="surya-note">Illustrative artwork of the Sun Salutation flow.</p>
+      <div class="cta-row"><a class="btn gold" href="surya.html">Explore Surya Namaskar →</a></div>
     </div>
   </div>
 </section>
@@ -216,6 +136,7 @@
   <div class="wrap">
     <h2 class="reveal">Class timings</h2>
     <p class="sub reveal">Two batches a day — start your morning with yoga, or unwind in the evening.</p>
+    <p class="next-batch reveal" id="nextBatch"><span>Finding your next batch…</span></p>
     <div class="timings">
       <div class="time-card reveal">
         <div class="time-ic" style="background:#fbeed3">🌅</div>
@@ -244,6 +165,7 @@
           <a class="btn small light" href="https://wa.me/917995978470?text=Hi%20Shri%20Yoga!%20I%27d%20like%20to%20register%20for%20yoga%20classes." target="_blank" rel="noopener">WhatsApp</a>
           <a class="btn small light" href="https://maps.app.goo.gl/QySuCNKj5WNnwrUv6" target="_blank" rel="noopener">📍 Get Directions</a>
           <a class="btn small gold" href="https://forms.gle/aTSgxCUhNtvd9ntq8" target="_blank" rel="noopener">Fill Registration Form</a>
+          <a class="btn small light" href="https://g.page/r/CbifOy_LYxk5EBE/review" target="_blank" rel="noopener">⭐ Review us on Google</a>
         </div>
       </div>
       <iframe class="map reveal" title="Shri Yoga location map — Sri Nilayam, Gorantla, Guntur" src="https://www.google.com/maps?q=Shri+Yoga,+Sri+Nilayam,+Gorantla,+Guntur,+Andhra+Pradesh+522034&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -253,36 +175,18 @@
 
 <footer>
   <b>Shri Yoga</b><br>
-  Yoga for a Better You · Guntur<br>
+  <span class="foot-tag">Yoga for a Better You · Guntur</span><br>
+  <div class="foot-links"><a href="index.html">Home</a><a href="surya.html">Surya Namaskar</a><a href="breathe.html">Breathing</a><a href="index.html#classes">Classes</a><a href="index.html#timings">Timings</a><a href="index.html#contact">Contact</a></div>
+  <a href="tel:+917995978470" style="color:#fff;text-decoration:none;font-weight:600">📞 79959 78470</a> · <a href="https://g.page/r/CbifOy_LYxk5EBE/review" target="_blank" rel="noopener" style="color:#c9a24b">⭐ Review us on Google</a><br>
   <span style="font-size:14px">© 2026 Shri Yoga. It's never too late to begin.</span>
 </footer>
 
-<script>
-  // Scroll reveal
-  const io = new IntersectionObserver(es => es.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
-  }), { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+<div class="sticky-bar">
+  <a href="tel:+917995978470">📞 Call</a>
+  <a href="https://wa.me/917995978470?text=Hi%20Shri%20Yoga!%20I%27d%20like%20to%20register%20for%20yoga%20classes." target="_blank" rel="noopener">💬 WhatsApp</a>
+  <a class="gold" href="https://forms.gle/aTSgxCUhNtvd9ntq8" target="_blank" rel="noopener">Register</a>
+</div>
 
-  // Nav shadow on scroll
-  const nav = document.getElementById('nav');
-  addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 10), { passive: true });
-
-  // Festive offer countdown — ends 8 Nov 2026, 11:59 PM IST
-  const end = new Date('2026-11-08T23:59:59+05:30').getTime();
-  function tick() {
-    let d = end - Date.now();
-    if (d < 0) d = 0;
-    const days = Math.floor(d / 86400000);
-    const hrs = Math.floor(d % 86400000 / 3600000);
-    const min = Math.floor(d % 3600000 / 60000);
-    const sec = Math.floor(d % 60000 / 1000);
-    document.getElementById('cd-d').textContent = days;
-    document.getElementById('cd-h').textContent = String(hrs).padStart(2, '0');
-    document.getElementById('cd-m').textContent = String(min).padStart(2, '0');
-    document.getElementById('cd-s').textContent = String(sec).padStart(2, '0');
-  }
-  tick(); setInterval(tick, 1000);
-</script>
+<script src="app.js"></script>
 </body>
 </html>
