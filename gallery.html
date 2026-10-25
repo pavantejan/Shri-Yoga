@@ -56,7 +56,7 @@
 <div class="gallery-grid reveal">
       <img src="gallery/offline-1.png" alt="Group seated on colourful mats in the studio" loading="lazy">
       <img src="gallery/offline-3.jpg" alt="Two children doing candle-gazing in the studio" loading="lazy">
-      <img src="gallery/offline-5.jpg" alt="Group doing standing side-bend poses in the studio" loading="lazy">
+      <img src="gallery/offline-5.jpg?v=2" alt="Group doing standing side-bend poses in the studio" loading="lazy">
       <img src="gallery/offline-6.jpg" alt="Group yoga session in the studio" loading="lazy">
       <img src="gallery/offline-8.jpg" alt="Group seated in the studio" loading="lazy">
       <img src="gallery/offline-10.png" alt="Group doing an eye exercise in the studio" loading="lazy">
@@ -97,6 +97,17 @@
   <a href="tel:+917995978470">📞 Call</a>
   <a href="https://wa.me/917995978470?text=Hi%20Shri%20Yoga!%20I%27d%20like%20to%20register%20for%20yoga%20classes." target="_blank" rel="noopener">💬 WhatsApp</a>
   <a class="gold" href="https://forms.gle/aTSgxCUhNtvd9ntq8" target="_blank" rel="noopener">Register</a>
+</div>
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lb-btn lb-close" id="lbClose" type="button" aria-label="Close">×</button>
+  <button class="lb-btn lb-prev" id="lbPrev" type="button" aria-label="Previous">‹</button>
+  <button class="lb-btn lb-next" id="lbNext" type="button" aria-label="Next">›</button>
+  <div class="lb-stage" id="lbStage"><img id="lbImg" src="" alt=""></div>
+  <div class="lb-tools">
+    <button id="lbZoomOut" type="button" aria-label="Zoom out">−</button>
+    <span id="lbZoomLabel">100%</span>
+    <button id="lbZoomIn" type="button" aria-label="Zoom in">+</button>
+  </div>
 </div>
 <script src="app.js"></script>
 </body>

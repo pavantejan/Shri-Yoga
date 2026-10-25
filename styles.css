@@ -223,3 +223,18 @@
   .preview-strip img{height:120px}
   .gallery-grid img{height:180px}
 }
+
+/* lightbox: click any class photo to preview + zoom */
+.gallery-grid img, .preview-strip img{cursor:zoom-in}
+.lightbox{position:fixed;inset:0;background:rgba(6,32,26,.93);z-index:300;display:flex;align-items:center;justify-content:center}
+.lightbox[hidden]{display:none}
+.lb-stage{width:100%;height:100%;overflow:auto;display:flex;align-items:center;justify-content:center;padding:64px 12px 76px;box-sizing:border-box}
+.lb-stage img{max-width:94vw;max-height:82vh;object-fit:contain;border-radius:12px;cursor:zoom-in}
+.lb-stage img.zoomed{cursor:zoom-out}
+.lb-btn{position:fixed;z-index:301;background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:50%;width:46px;height:46px;font-size:24px;cursor:pointer;line-height:1}
+.lb-close{top:14px;right:14px}
+.lb-prev{left:12px;top:50%;transform:translateY(-50%)}
+.lb-next{right:12px;top:50%;transform:translateY(-50%)}
+.lb-tools{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:301;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:6px 10px}
+.lb-tools button{background:#c9a24b;color:#0c3b2e;border:0;border-radius:50%;width:38px;height:38px;font-size:22px;cursor:pointer;line-height:1}
+.lb-tools span{color:#fff;font-weight:600;min-width:52px;text-align:center}

@@ -297,3 +297,71 @@
   renderGreet();
   renderNextBatch();
   setInterval(renderNextBatch, 30000);
+
+/* lightbox: click a class photo to preview, zoom, and step through */
+(function () {
+  const box = document.getElementById("lightbox");
+  if (!box) return;
+  const stage = document.getElementById("lbStage");
+  const img = document.getElementById("lbImg");
+  const label = document.getElementById("lbZoomLabel");
+  const ZOOMS = [1, 1.5, 2, 3];
+  let set = [], idx = 0, zi = 0;
+
+  function applyZoom() {
+    const z = ZOOMS[zi];
+    label.textContent = Math.round(z * 100) + "%";
+    if (z === 1) {
+      img.style.width = ""; img.style.maxWidth = "94vw"; img.style.maxHeight = "82vh";
+      img.classList.remove("zoomed");
+    } else {
+      img.style.maxWidth = "none"; img.style.maxHeight = "none";
+      img.style.width = Math.round(img.naturalWidth * z) + "px";
+      img.classList.add("zoomed");
+      requestAnimationFrame(() => {
+        stage.scrollLeft = (stage.scrollWidth - stage.clientWidth) / 2;
+        stage.scrollTop = (stage.scrollHeight - stage.clientHeight) / 2;
+      });
+    }
+  }
+  function show(i) {
+    idx = (i + set.length) % set.length;
+    zi = 0;
+    img.src = set[idx].src;
+    img.alt = set[idx].alt || "";
+    img.style.width = ""; img.style.maxWidth = "94vw"; img.style.maxHeight = "82vh";
+    img.classList.remove("zoomed");
+    label.textContent = "100%";
+    box.hidden = false;
+    document.body.style.overflow = "hidden";
+  }
+  function close() {
+    box.hidden = true;
+    document.body.style.overflow = "";
+    img.src = "";
+  }
+  document.querySelectorAll(".gallery-grid img, .preview-strip img").forEach((el) => {
+    el.addEventListener("click", () => {
+      const scope = el.closest(".gallery-grid, .preview-strip");
+      set = scope ? Array.from(scope.querySelectorAll("img")) : [el];
+      show(set.indexOf(el));
+    });
+  });
+  document.getElementById("lbClose").addEventListener("click", close);
+  document.getElementById("lbPrev").addEventListener("click", () => show(idx - 1));
+  document.getElementById("lbNext").addEventListener("click", () => show(idx + 1));
+  document.getElementById("lbZoomIn").addEventListener("click", () => {
+    if (zi < ZOOMS.length - 1) { zi++; applyZoom(); }
+  });
+  document.getElementById("lbZoomOut").addEventListener("click", () => {
+    if (zi > 0) { zi--; applyZoom(); }
+  });
+  img.addEventListener("click", () => { zi = zi === 0 ? 2 : 0; applyZoom(); });
+  stage.addEventListener("click", (e) => { if (e.target === stage) close(); });
+  document.addEventListener("keydown", (e) => {
+    if (box.hidden) return;
+    if (e.key === "Escape") close();
+    if (e.key === "ArrowLeft") show(idx - 1);
+    if (e.key === "ArrowRight") show(idx + 1);
+  });
+})();
